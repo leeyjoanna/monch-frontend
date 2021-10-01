@@ -5,12 +5,19 @@ const Save = ({list, pageURL}) => {
 
     const handleSave = () => {
         const title = document.getElementById('title-name').value
+        const date = document.getElementById('event-date').value
+        console.log(date)
+        if (title===''){
+            alert('please add a title')
+            return
+        }
         const listArray = []
         for (let i= 0; i < list.length; i++){
             listArray.push(list[i].id)
         }
         const saveData = {
             title: title,
+            date: date,
             restaurants: listArray
         }
         monchService
@@ -32,8 +39,9 @@ const Save = ({list, pageURL}) => {
         else {
             return (
                 <div>
-                    <input id='title-name' autoComplete='off'></input>
-                    <button onClick={handleSave}>Save list</button>
+                    <div>Name your list:<input type='text' id='title-name' autoComplete='off'></input></div>
+                    <div>Date of event:<input type='date' id='event-date' acutcomplete='off'></input></div>
+                    <div><button onClick={handleSave}>Save list</button></div>
                 </div>
             )
         }

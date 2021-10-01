@@ -14,9 +14,9 @@ const ResultList = ({item, list, setList, pageURL}) => {
 
         if(pageURL != ''){
             monchService    
-                    .updateList(itemAPI, pageURL)
-                    .then( response => console.log(response))
-                    .catch(e => {console.log(e)})
+                .updateList(itemAPI, pageURL)
+                .then( response => console.log(response))
+                .catch(e => {console.log(e)})
         }
     }    
                 

@@ -31,4 +31,9 @@ const deleteEntry = (itemAPI, uuid) => {
     return request.then(response => response.data)
 }
 
-export default{ getAllServer, searchTemp, getIndividual, saveList, updateList, deleteEntry}
+const vote = (itemAPI, uuid, name) => {
+    const request = axios.put(`/myList/${uuid}/votes`, {data: {itemAPI, name}})
+    return request.then(response => response.data)
+
+}
+export default{ getAllServer, searchTemp, getIndividual, saveList, updateList, deleteEntry, vote}

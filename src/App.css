@@ -14,9 +14,15 @@
 } */
 .list-individ-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     border-style: solid;
     border-width: 1px;
+    padding: 10px;
+    margin: 5px;
+}
+.list-individ-container-yelpinfo{
+    display: flex;
+    flex-direction: row;
     padding: 10px;
     margin: 5px;
 }

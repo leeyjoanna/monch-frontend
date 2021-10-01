@@ -10,10 +10,9 @@ const App = () => {
   const [ leftPage, setLeftPage ] = useState('homeLeft')
   const [ rightPage, setRightPage ] = useState('homeRight')
   const [ list, setList ] = useState([])
-  const [ idOnlyList, setidOnlyList ] = useState([])
-  const [ savedList, setSavedList ] = useState([])
   const [ title, setTitle ] = useState('')
   const [ date, setDate] = useState('')
+  const [name, setName] = useState('')
   // const [ pageURL, setPageURL ] = useState('/')
 
   const pageURL = (window.location.href).split('/')[3]
@@ -37,10 +36,10 @@ const App = () => {
       </div>
       <div id='main-container'>
         <div id='left-container'>
-          <Left list = {list} setList = {setList} pageURL = {pageURL} title = {title}/>
+          <Left list = {list} date={date} setList = {setList} pageURL = {pageURL} title = {title} name={name} setName={setName}/>
         </div>
         <div id='right-container'>
-          <Right pageType = {rightPage} list={list} setList={setList} pageURL = {pageURL}/>
+          <Right list={list} setList={setList} pageURL = {pageURL}/>
         </div>
         
       </div>
