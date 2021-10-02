@@ -7,6 +7,17 @@ const ResultList = ({item, list, setList, pageURL}) => {
         console.log(`result list itemID: ${e.target.value}`)
         const itemAPI = {id: e.target.value}
 
+        function doesExist(checkID) {
+            return list.some((n) => {
+              return n.id === checkID;
+            }); 
+          }
+
+
+        if(doesExist(itemAPI.id)){
+            alert('you\'ve added this already!')
+            return
+        }
         monchService
             .getIndividual(itemAPI)
             .then(response => {

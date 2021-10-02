@@ -27,7 +27,7 @@ const Left = ({list, setList, title, date, pageURL, name, setName}) => {
     }
 
     return (
-        <div>
+        <div id='left-list-container'>
         <div id='welcome-text'> <Welcome name={name}/></div>   
         <div id='list-info-container'>
             <div id='list-title'>{title}</div>

@@ -39,8 +39,8 @@ const Save = ({list, pageURL}) => {
         else {
             return (
                 <div>
-                    <div class ='search-div'>Name your list:<input type='text' id='title-name' autoComplete='off'></input></div>
-                    <div class='search-div'>Date of event:<input type='date' id='event-date' acutcomplete='off'></input></div>
+                    <div class ='search-div'>Name your list: <input type='text' id='title-name' autoComplete='off'></input></div>
+                    <div class='search-div'>Date of event: <input type='date' id='event-date' acutcomplete='off'></input></div>
                     <div><button onClick={handleSave}>Save list</button></div>
                 </div>
             )
