@@ -21,8 +21,8 @@ const Right = ({list, setList, pageURL}) => {
     return(
         <div id='right-list-container'>
             <div>
-                <div class='search-div'>Search: <input id='searchTerm' type='text' autoComplete='off' placeholder='boba'/></div>
-                <div class='search-div'>Location: <input id='searchLocation' type='text' autoComplete='off' placeholder='san francisco, ca'/></div>
+                <div className='search-div'>Search: <input id='searchTerm' type='text' autoComplete='off' placeholder='boba'/></div>
+                <div className='search-div'>Location: <input id='searchLocation' type='text' autoComplete='off' placeholder='san francisco, ca'/></div>
                 <button onClick={handleSearch}>Search</button>
             </div>
             <div>

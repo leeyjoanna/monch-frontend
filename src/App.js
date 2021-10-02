@@ -13,6 +13,8 @@ const App = () => {
   const [name, setName] = useState('')
 
   let pageURL = (window.location.href).split('/')[3]
+  pageURL = pageURL.split('?')[0]
+  console.log(pageURL)
 
   const hook = () => {
       monchService  

@@ -151,6 +151,17 @@ button{
     border-style: solid;
     border-width: thin;
     border-radius: 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+}
+button:hover{
+    background-color: #f3cf82;
+}
+button:active {
+    transform: scale(0.90)
 }
 #contact{
     font-size: 15px;
