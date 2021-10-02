@@ -7,32 +7,38 @@ import monchService from './services/monch'
 
 
 const App = () => {
-  const [ leftPage, setLeftPage ] = useState('homeLeft')
-  const [ rightPage, setRightPage ] = useState('homeRight')
   const [ list, setList ] = useState([])
   const [ title, setTitle ] = useState('')
   const [ date, setDate] = useState('')
   const [name, setName] = useState('')
-  // const [ pageURL, setPageURL ] = useState('/')
 
-  const pageURL = (window.location.href).split('/')[3]
+  let pageURL = (window.location.href).split('/')[3]
 
   const hook = () => {
-    monchService  
-      .getAllServer(pageURL)
-      .then(response => {
-        setTitle(response.title)
-        setDate(response.date)
-        setList(response.restaurants)
-      })
-  }
+      monchService  
+        .getAllServer(pageURL)
+        .then(response => {
+          // console.log('useEffect')
+          // console.log('response', response)
+          setTitle(response.title)
+          setDate(response.date)
+          setList(response.restaurants)
+        })
+    }
+
   useEffect(hook, [])
   
+  const handleHome = () => {
+    window.location.href='/'
+    console.log('home button cool')
+    return false
+  }
 
   return(
-    <div>
+    <div id='body'>
       <div id='nav-bar'>
-      Let's monch ! <br/><br/>
+        <div id='monch-title' onClick= {handleHome}> Let's monch !</div>
+        <div id='contact'>A personal project, by <a id='personal-link' href='http://jojopuff.herokuapp.com' target='_blank'>Joanna Lee.</a> &#169; 2021</div>
       </div>
       <div id='main-container'>
         <div id='left-container'>

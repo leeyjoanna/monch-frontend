@@ -1,36 +1,147 @@
+
+#nav-bar{
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #ffc24b;
+    height: 40px;
+}
+#monch-title{
+    padding: 10px;  
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    color: #093d44;
+    background: #fff4f17e;
+    border-radius: 5px;
+}
+
 #main-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+
 }
-/* #left-container{
-    position: sticky;
-    left: 5%;
-    top: 50px;
-    width: 30%;
+#left-container{
+    min-height: 100vh;
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    flex-grow: 2;
+    padding: 15px;
+    background-color: #f8f1e3bd;
+}
+#list-info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #c5dddfa6;
+    border-radius: 5px;
+}
+#list-title{
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#list-date{
+    font-size: 16px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+#welcome-text{
+    font-size: 21px;
+    padding-bottom: 10px;
 }
 #right-container{
-    width: 40%;
-} */
+    display: flex;
+    flex-grow: 5;
+    padding: 20px;
+    min-height: 100%;
+    width: 55%;
+}
+.search-div{
+    padding: 5px;
+    font-size: 20px;
+}
+input{
+    font-size: 20px;
+}
 .list-individ-container{
     display: flex;
     flex-direction: column;
     border-style: solid;
     border-width: 1px;
+    border-radius: 5px;
+    border-color: #1697a6;
     padding: 10px;
-    margin: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 .list-individ-container-yelpinfo{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding: 10px;
-    margin: 5px;
+}
+.list-img-container{
+    display: flex;
+    flex-grow: 1;
 }
 .icon-img{
-    height: 70px;
+    width: 80px;
     padding-right: 5px;
 }
 .list-data-container{
     display: flex;
     flex-direction: column;
+    flex-grow: 2;
+    padding-right: 10px;
+}
+.list-button-container{
+    display: inline-block;
+    align-self: flex-end;
+    flex-grow: 1;
+}
+.bottom-row-container{
+    display: flex;
+    justify-content: space-between;
+}
+.logo-container{
+    display:flex;
+}
+#yelp-logo{
+    height: 20px;
+}
+#item-name{
+    font-size: 18px;
+    padding: 3px;
+}
+#item-rating{
+    font-size: 14px;
+    padding: 3px;
+}
+#item-address{
+    font-size: 16px;
+    padding: 3px;
+}
+button{
+    background-color: #e4e4e4;
+    color:#3f2f0f;
+    margin: 4px;
+    padding: 5px;
+    border-style: solid;
+    border-width: thin;
+    border-radius: 2px;
+}
+#contact{
+    font-size: 15px;
+}
+#personal-link{
+    color: inherit;
 }
